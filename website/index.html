@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./app.js" defer></script>
+    <title>Weather APP</title>
+  </head>
+  <body>
+    <template id="post-template">
+      <li class="weather__item">
+        <h3></h3>
+        <span></span>
+        <!-- temp -->
+        <p class="temp"></p>
+        <!-- min temp -->
+        <p class="min__temp"></p>
+        <!-- max temp -->
+        <p class="max__temp"></p>
+        <!-- pressure -->
+        <p class="pressure"></p>
+        <!-- wind speed -->
+        <p class="wind__speed"></p>
+        <!-- wind degree -->
+        <p class="wind__degree"></p>
+      </li>
+    </template>
+    <h1 class="title">Welcome to the Weather App</h1>
+    <div class="container">
+      <form id="form">
+        <div>
+          <label for="City">Enter Your City &#183;</label>
+          <input type="text" name="city" id="city" />
+        </div>
+        <div>
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+      <div class="weather__post">
+        <ul class="weather__list"></ul>
+      </div>
+    </div>
+  </body>
+</html>
