@@ -8,37 +8,32 @@
     <title>Weather APP</title>
   </head>
   <body>
-    <template id="post-template">
-      <li class="weather__item">
-        <h3></h3>
-        <span></span>
-        <!-- temp -->
-        <p class="temp"></p>
-        <!-- min temp -->
-        <p class="min__temp"></p>
-        <!-- max temp -->
-        <p class="max__temp"></p>
-        <!-- pressure -->
-        <p class="pressure"></p>
-        <!-- wind speed -->
-        <p class="wind__speed"></p>
-        <!-- wind degree -->
-        <p class="wind__degree"></p>
-      </li>
-    </template>
     <h1 class="title">Welcome to the Weather App</h1>
     <div class="container">
       <form id="form">
-        <div>
-          <label for="City">Enter Your City &#183;</label>
-          <input type="text" name="city" id="city" />
+        <div class="zip__holder">
+          <label for="zipCode">Enter Your City Zip Code &#183;</label>
+          <input type="number" name="zipCode" id="zipCode" />
+        </div>
+        <div class="Feeling__holder">
+          <textarea
+            name="feelings"
+            id="feelings"
+            cols="30"
+            rows="10"
+          ></textarea>
         </div>
         <div>
-          <button type="submit">Submit</button>
+          <button id="btn-submit" type="submit">Submit</button>
         </div>
       </form>
-      <div class="weather__post">
-        <ul class="weather__list"></ul>
+      <div class="header">
+        <h1 class="header__tittle">Recent Information</h1>
+        <div class="entryHolder">
+          <div id="date"></div>
+          <div id="temp"></div>
+          <div id="content"></div>
+        </div>
       </div>
     </div>
   </body>
