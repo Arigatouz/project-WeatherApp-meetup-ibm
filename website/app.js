@@ -83,9 +83,13 @@ const updateUI = async (url) => {
   try {
     const allData = await request.json();
     console.log(allData);
-    document.getElementById("date").innerHTML = allData.date;
-    document.getElementById("temp").innerHTML = allData.temp;
-    document.getElementById("content").innerHTML = allData.feelings;
+    document.getElementById("date").innerHTML = `today is : ${allData.date}`;
+    document.getElementById(
+      "temp"
+    ).innerHTML = `today's temperature is >>> ${allData.temp}`;
+    document.getElementById(
+      "content"
+    ).innerHTML = `your feelings is :${allData.feelings}`;
   } catch (error) {
     console.log("error", error);
     throw Error("can't get data ");

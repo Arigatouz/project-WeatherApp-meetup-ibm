@@ -1,19 +1,55 @@
-html{
+html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-:root{
+:root {
   font-size: 62.5%;
 }
-body{
+body {
   background-color: #333;
-  color: #FFF;
+  color: #fff;
 }
 
-.container{
+.container {
   border: 2px solid #fff;
   margin: 0 auto;
   max-width: 50%;
+  padding: 3em;
+}
+.title {
+  font-size: 6rem;
+  width: 50%;
+  margin: 2em auto;
+  text-align: center;
+  color: teal;
+}
+.zip__holder label {
+  font-size: 3rem;
+  margin-right: 0.5em;
+}
+input {
+  width: 40%;
+  font-size: 2em;
+  height: 2em;
+  border-radius: 2em;
+  border: 3px solid rgb(77, 108, 209);
+}
+textarea {
+  font-size: 3em;
+}
+
+button {
+  border: 2px solid rgba(40, 50, 255, 0.5);
+  background-color: rgb(75, 106, 211);
+  padding: 1rem 2rem;
+  font-size: 2em;
+}
+.header__tittle {
+  font-size: 3em;
+}
+.entryHolder {
+  font-size: 2.5em;
+  color: aqua;
 }
