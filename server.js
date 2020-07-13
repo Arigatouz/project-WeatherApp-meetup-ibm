@@ -7,15 +7,14 @@ const projectData = {},
 
 app.use(express.static("website"));
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 app.use(cors());
 
 app.get("/all", sendData);
 function sendData(req, res) {
   res.send(projectData);
   console.log(projectData);
-
 }
-
 app.post("/addWeather", storeWeatherData);
 
 function storeWeatherData(req, res) {

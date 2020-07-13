@@ -6,10 +6,9 @@ const newDate = `${
 // working APi http://api.openweathermap.org/data/2.5/weather?q=egypt&units=metric&APPID=01ad071dfa318cd13176b18744267ba6&lang=en//
 const keyAPI = "01ad071dfa318cd13176b18744267ba6";
 const APILink =
-  "http://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?zip=";
-const feelings = document.getElementById("feelings");
+  "https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?";
 const getFetch = async (method, zip, data) => {
-  const result = await fetch(`${APILink}${zip}&APPID=${keyAPI}`, {
+  const result = await fetch(`${APILink}&APPID=${keyAPI}&zip=${zip}`, {
     method: method,
     body: JSON.stringify(data),
     headers: {
@@ -52,18 +51,20 @@ const postData = async (url, data) => {
   }
 };
 const getWeather = async (zip) => {
+  console.log(feelings);
   const cityZip = document.getElementById("zipCode").value;
   zip = cityZip;
   await getFetch("get", zip)
     .then((newData) => {
+      const feelingsInput = document.getElementById("feelings").value;
+      console.log(feelingsInput);
       postData("/addWeather", {
         temperature: newData.main.temp,
         date: newDate,
-        feelings: document.getElementById("content").value,
+        feelings: feelingsInput,
       });
       console.log(newData.main.temp);
       console.log(newDate);
-      console.log(document.getElementById("feelings").value);
     })
     .then(() => {
       updateUI("/all");
